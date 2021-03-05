@@ -1,0 +1,24 @@
+#pragma once
+
+#include <polygon/mesh.h>
+#include <polygon/core.h>
+#include <polygon/scene.h>
+#include <polygon/gizmos.h>
+#include <polygon/screen.h>
+#include <polygon/camera.h>
+#include <polygon/sunLight.h>
+#include <polygon/transform.h>
+#include <polygon/component.h>
+#include <polygon/spotLight.h>
+#include <polygon/primitives.h>
+#include <polygon/gameObject.h>
+#include <polygon/editorGrid.h>
+#include <polygon/pointLight.h>
+#include <polygon/environment.h>
+#include <polygon/sceneManager.h>
+#include <polygon/meshRenderer.h>
+#include <polygon/sceneScripting.h>
+#include <polygon/cameraController.h>
+#include <polygon/defaultGameConfig.h>
+#include <polygon/materialScripting.h>
+#include <polygon/defaultLevelConfig.h>
