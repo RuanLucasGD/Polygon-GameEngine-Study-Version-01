@@ -4,6 +4,53 @@ A simple 3D game engine made using c++ and OpenGL following tutorials of [Learn 
 
 ![Screenshot_1](https://user-images.githubusercontent.com/79365912/110024823-f513f880-7d04-11eb-8a38-5525f08e82ad.png)
 
+In this repository there are two Visual Studio, Engine and Game projects. Engine is the main design here, all engine functions are there, in the Game, there is example of how to use the engine. The engine is a static library (.lib), for use, link the library on your project, make sure the compiler is configured for 64x, add engine include folder and game include folder.
+
+<h2>Create game window and default scene</h2>
+First, in game project, add main.cpp file and youSceneScript.h for first game level.
+DefaultGameConfig is a initial game settings, window size, game name and more.
+DefaultLevelConfig is your first level, on create the game, the first level is created and loaded.
+Later, create the main game loop using DefaultGameConfig and DefaultLevelConfig.
+
+```
+#include <polygon/polygon.h>	// engine
+
+#include <Level_0.h>		// sceneScript
+
+int main() {
+
+	DefaultGameConfig* gameConfig = new DefaultGameConfig("Polygon Engine", 980, 840);
+	DefaultLevelConfig* levelConfig = new DefaultLevelConfig("level 0", new level_0());
+
+	Core* game = new Core(gameConfig, levelConfig);
+	game->UpdateGame();
+	game->~Core();
+
+	return 0;
+}
+```
+
+Now, add logic on the first level.
+```
+#include <Level_0.h>
+
+#include <iostream>
+
+void level_0::OnStart() {
+
+	scene->environment->backgroundColor = glm::vec3(0.9, 0.9, 1.0);
+
+	scene->AddDefaultCamera(glm::vec3(), glm::vec3());
+}
+
+void level_0::OnUpdate(float delta) {
+
+	std::cout << "game loop is running" << std::endl;
+}
+```
+More detals of how to program your game using Polygon Engine below.
+
+
 Used APIs:
 * [GLAD](https://glad.dav1d.de/) for load OpenGL 
 * [GLM](https://glm.g-truc.net/0.9.9/index.html) Mathematic API for OpenGL
