@@ -1,1 +1,7 @@
-﻿  Game.vcxproj -> C:\Users\ruanl\OneDrive\Documentos\dev\git\Polygon\Polygon\x64\Debug\Game.exe
+﻿  Level_0.cpp
+C:\Users\ruanl\OneDrive\Documentos\dev\git\Polygon\Polygon\Engine\include\polygon\primitives.h(32,3): warning C4305: 'inicializando': truncamento de 'double' para '_Ty'
+          with
+          [
+              _Ty=float
+          ]
+  Game.vcxproj -> C:\Users\ruanl\OneDrive\Documentos\dev\git\Polygon\Polygon\x64\Debug\Game.exe

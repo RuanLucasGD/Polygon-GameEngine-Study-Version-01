@@ -1,0 +1,2 @@
+C:\Users\ruanl\OneDrive\Documentos\dev\git\Polygon\Polygon\bin\Engine.pdb
+C:\Users\ruanl\OneDrive\Documentos\dev\git\Polygon\Polygon\Engine\x64\Debug\Engine.pdb

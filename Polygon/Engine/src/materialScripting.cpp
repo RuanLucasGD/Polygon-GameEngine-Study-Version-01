@@ -17,9 +17,6 @@
 
 void MaterialScripting::SetShader(const char* vPath, const char* fPath) {
 
-	// --- create and compile shaders --- //
-
-
 	// --- open shaders files ---//
 	std::ifstream vFile;
 	std::ifstream fFile;
@@ -189,15 +186,16 @@ void MaterialScripting::SetTexture(const char* path, bool useAlfa) {
 
 void MaterialScripting::EnableMipmapping(bool use) {
 
-	if (textureID == 0) {
+	if (this->textureID == 0) {
 
 		std::cout << "texture not created" << std::endl;
 		return;
 	}
 
+	glBindTexture(GL_TEXTURE_2D, textureID);
 	const int FILTER = use ? GL_LINEAR : GL_NEAREST;
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, FILTER);
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, FILTER);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST_MIPMAP_NEAREST);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
 }
 
 void MaterialScripting::UpdateTransform() {
@@ -236,6 +234,10 @@ void MaterialScripting::Use() {
 		return;
 	}
 
-	glBindTexture(GL_TEXTURE_2D, textureID);
+	if (textureID != 0) {
+
+		glBindTexture(GL_TEXTURE_2D, textureID);
+	}
+
 	glUseProgram(shaderID);
 }

@@ -53,7 +53,7 @@ void level_0::OnStart() {
 		PointLight* lc = l->AddComponent<PointLight>();
 
 		lc->color = glm::vec3(1.0f);
-		lc->maxDistance = 6;
+		lc->maxDistance = 5;
 		light = l;
 	}
 
@@ -75,9 +75,13 @@ void level_0::OnStart() {
 	spot->transform->SetRot(glm::vec3(-90, 0, 0));
 
 	playerMaterial->SetVec3("material.color", glm::vec3(1));
-	enemyMaterial->SetVec3("material.color", glm::vec3(0.4f));
+	enemyMaterial->SetVec3("material.color", glm::vec3(0.5f));
+
 	playerMaterial->SetTexture("assets/box.png", true);
+	enemyMaterial->SetTexture("assets/ground_01.png", true);
+
 	playerMaterial->EnableMipmapping(false);
+	enemyMaterial->EnableMipmapping(false);
 
 	playerMaterial->specular = 1;
 	enemyMaterial->specular = 0.4f;
