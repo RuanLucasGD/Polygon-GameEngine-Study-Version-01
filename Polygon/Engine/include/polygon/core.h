@@ -15,6 +15,8 @@ private:
 	Scene* currentScene;
 	EditorGrid* editorGrid;
 
+	// --- ImGui --- //
+	const char* openglVersion = "#version 330";
 
 	// --- 3D grid --- //
 
@@ -22,9 +24,15 @@ private:
 	const int EDITOR_GRID_SPACE = 1;
 
 
-	// --- used in game loop --- //
-	void Start();
-	void Update(float delta);
+	// --- game loop --- //
+	void StartGame();
+	void UpdateGame(float delta);
+
+	// --- editor --- //
+	void StartEditor();
+	void UpdateEditor();
+
+	// --- render all --- //
 	void Render();
 public:
 
@@ -41,7 +49,7 @@ public:
 	/*
 	* Run main game loop
 	*/
-	void UpdateGame();
+	void Loop();
 
 	/*
 	* Close the game

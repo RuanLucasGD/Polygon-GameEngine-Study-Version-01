@@ -8,7 +8,7 @@ int main() {
 	DefaultLevelConfig* levelConfig = new DefaultLevelConfig("level 0", new level_0());
 
 	Core* game = new Core(gameConfig, levelConfig);
-	game->UpdateGame();
+	game->Loop();
 	game->~Core();
 
 	return 0;

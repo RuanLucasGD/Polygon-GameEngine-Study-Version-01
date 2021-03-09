@@ -17,6 +17,7 @@ public:
 	GameObject* gameObject = nullptr;
 
 
+	virtual void OnEditor() {}
 	virtual void OnStart() {}
 	virtual void OnUpdate(float delta) {}
 	virtual void OnRender() {}

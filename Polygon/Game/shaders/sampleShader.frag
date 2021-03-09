@@ -123,7 +123,7 @@ vec3 CalcSpotLight(SpotLight light, Material material, vec3 normal)
 	float influenceDist = 1 - (dist / maxDistance);
 	float intensity = clamp((theta - externAngle) / epsilon, 0, 1);
 
-	vec3 color = light.color * influenceAngle * intensity * influenceDist;
+	vec3 color = light.color * influenceAngle * intensity * influenceDist * 2;
 
 	// specular
 	vec3 viewDir = normalize(cameraPos - fragPos);

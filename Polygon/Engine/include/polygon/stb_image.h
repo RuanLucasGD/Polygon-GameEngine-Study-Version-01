@@ -7169,7 +7169,7 @@ static float* stbi__hdr_load(stbi__context* s, int* x, int* y, int* comp, int re
 				while ((nleft = width - i) > 0) {
 					count = stbi__get8(s);
 					if (count > 128) {
-						// UpdateGame
+						// Loop
 						value = stbi__get8(s);
 						count -= 128;
 						if (count > nleft) { STBI_FREE(hdr_data); STBI_FREE(scanline); return stbi__errpf("corrupt", "bad RLE data in HDR"); }

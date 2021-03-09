@@ -8,6 +8,8 @@
 #include <polygon/screen.h>
 #include <polygon/transform.h>
 
+#include <polygon/imgui/imgui.h>
+
 CameraController::CameraController() {
 
 	this->rotSpeed = 0;
@@ -48,7 +50,7 @@ void CameraController::OnUpdate(float delta) {
 
 	glfwGetCursorPos(window, &mousePosX, &mousePosY);
 
-	if (glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_LEFT) == GLFW_PRESS)
+	if (glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_RIGHT) == GLFW_PRESS)
 	{
 		// --- get mouse speed --- //
 

@@ -405,6 +405,14 @@
     <ClInclude Include="include\polygon\glm\vec3.hpp" />
     <ClInclude Include="include\polygon\glm\vec4.hpp" />
     <ClInclude Include="include\polygon\glm\vector_relational.hpp" />
+    <ClInclude Include="include\polygon\imgui\imconfig.h" />
+    <ClInclude Include="include\polygon\imgui\imgui.h" />
+    <ClInclude Include="include\polygon\imgui\imgui_impl_glfw.h" />
+    <ClInclude Include="include\polygon\imgui\imgui_impl_opengl3.h" />
+    <ClInclude Include="include\polygon\imgui\imgui_internal.h" />
+    <ClInclude Include="include\polygon\imgui\imstb_rectpack.h" />
+    <ClInclude Include="include\polygon\imgui\imstb_textedit.h" />
+    <ClInclude Include="include\polygon\imgui\imstb_truetype.h" />
     <ClInclude Include="include\polygon\KHR\khrplatform.h" />
     <ClInclude Include="include\polygon\materialScripting.h" />
     <ClInclude Include="include\polygon\mesh.h" />
@@ -557,6 +565,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="include\polygon\glm\detail\glm.cpp" />
+    <ClCompile Include="include\polygon\imgui\imgui.cpp" />
+    <ClCompile Include="include\polygon\imgui\imgui_demo.cpp" />
+    <ClCompile Include="include\polygon\imgui\imgui_draw.cpp" />
+    <ClCompile Include="include\polygon\imgui\imgui_impl_glfw.cpp" />
+    <ClCompile Include="include\polygon\imgui\imgui_impl_opengl3.cpp" />
+    <ClCompile Include="include\polygon\imgui\imgui_tables.cpp" />
+    <ClCompile Include="include\polygon\imgui\imgui_widgets.cpp" />
     <ClCompile Include="src\camera.cpp" />
     <ClCompile Include="src\cameraController.cpp" />
     <ClCompile Include="src\core.cpp" />

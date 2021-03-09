@@ -44,8 +44,8 @@ void level_0::OnStart() {
 
 	spotLight->color = glm::vec3(1.0f, 0, 0);
 	spotLight->angle = 30;
-	spotLight->maxDistance = 3;
-	spotLight->intensity = 1;
+	spotLight->maxDistance = 6;
+	spotLight->intensity = 10;
 
 	for (int i = 1; i < 5; i++) {
 
@@ -78,7 +78,7 @@ void level_0::OnStart() {
 	enemyMaterial->SetVec3("material.color", glm::vec3(0.5f));
 
 	playerMaterial->SetTexture("assets/box.png", true);
-	enemyMaterial->SetTexture("assets/ground_01.png", true);
+	enemyMaterial->SetTexture("assets/ground_01.png", false);
 
 	playerMaterial->EnableMipmapping(false);
 	enemyMaterial->EnableMipmapping(false);
