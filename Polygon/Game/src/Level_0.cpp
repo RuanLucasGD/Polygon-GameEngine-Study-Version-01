@@ -9,6 +9,8 @@
 
 #include <sampleMaterial.h>
 
+#include <polygon/imgui/imgui.h>
+
 GameObject* player;
 GameObject* camera;
 GameObject* enemy;
@@ -16,7 +18,15 @@ GameObject* enemy;
 GameObject* light;
 GameObject* spot;
 
-void level_0::OnStart() {
+void Level_0::OnEditor() {
+
+	ImGui::Begin("hello, window");
+	ImGui::Text("hello");
+	ImGui::Button("click me");
+	ImGui::End();
+}
+
+void Level_0::OnStart() {
 
 	// environment settings
 
@@ -87,7 +97,7 @@ void level_0::OnStart() {
 	enemyMaterial->specular = 0.4f;
 }
 
-void level_0::OnUpdate(float delta) {
+void Level_0::OnUpdate(float delta) {
 
 	player->transform->Rotate(glm::vec3(0, delta * 50, 0));
 	//player->transform->Move(glm::vec3(delta * 2, 0, 0));

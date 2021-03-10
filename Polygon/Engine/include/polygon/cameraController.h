@@ -22,7 +22,6 @@ public:
 
 	CameraController();
 
-	void OnEditor();
 	void OnStart();
 	void OnUpdate(float delta);
 };
