@@ -70,8 +70,7 @@ Goals:
 - [x] lights specular reflection
 - [ ] load and unload scenes
 - [x] environment settings
-- [ ] ImGui custom editor tools
-- [ ] ImGui component editor 
+- [x] ImGui custom editor tools
 - [ ] file manager 
 - [x] global / local moviment
 - [x] global / local rotation
@@ -182,7 +181,7 @@ Features:
   }
   ```
     
-  Environment:
+  * Environment:
   ```
   void OnStart()
   {
@@ -194,3 +193,12 @@ Features:
   }
   ```
   
+  * ImGui:
+  ```
+  void OnEditor() {
+
+	ImGui::Begin("hello, window");
+	ImGui::Text("hello");
+	ImGui::End();
+  }
+  ```
