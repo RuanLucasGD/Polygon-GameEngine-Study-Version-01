@@ -22,7 +22,11 @@ void Level_0::OnEditor() {
 
 	ImGui::Begin("hello, window");
 	ImGui::Text("hello");
-	ImGui::Button("click me");
+
+	if (ImGui::Button("click me")) {
+
+		std::cout << "hello, hello" << std::endl;
+	}
 	ImGui::End();
 }
 
@@ -93,8 +97,8 @@ void Level_0::OnStart() {
 	playerMaterial->EnableMipmapping(false);
 	enemyMaterial->EnableMipmapping(false);
 
-	playerMaterial->specular = 1;
-	enemyMaterial->specular = 0.4f;
+	playerMaterial->specular = 0.7f;
+	enemyMaterial->specular = 1.0f;
 }
 
 void Level_0::OnUpdate(float delta) {
