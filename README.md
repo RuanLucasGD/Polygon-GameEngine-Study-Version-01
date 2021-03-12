@@ -2,7 +2,11 @@
 My first game engine 3D i'm developing
 A simple 3D game engine made using c++ and OpenGL following tutorials of [Learn OpenGL](https://learnopengl.com/Getting-started/Hello-Triangle) and [Game Programming Patterns](https://gameprogrammingpatterns.com/)
 
-![Screenshot_1](https://user-images.githubusercontent.com/79365912/110024823-f513f880-7d04-11eb-8a38-5525f08e82ad.png)
+
+<img src="https://user-images.githubusercontent.com/79365912/110024823-f513f880-7d04-11eb-8a38-5525f08e82ad.png" width="600">
+
+<img src="https://user-images.githubusercontent.com/79365912/110939353-a7524e00-830b-11eb-8889-7d7926165356.png" width="600">
+
 
 In this repository there are two Visual Studio, Engine and Game projects. Engine is the main design here, all engine functions are there, in the Game, there is example of how to use the engine. The engine is a static library (.lib), for use, link the library on your project, make sure the compiler is configured for 64x, add engine include folder and game include folder.
 
