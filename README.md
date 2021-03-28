@@ -1,6 +1,6 @@
 # Polygon-GameEngine-Study-Version-01
 My first game engine 3D i'm developing
-A simple 3D game engine made using c++ and OpenGL following tutorials of [Learn OpenGL](https://learnopengl.com/Getting-started/Hello-Triangle) and [Game Programming Patterns](https://gameprogrammingpatterns.com/)
+A simple 3D game engine made using c++ and OpenGL following tutorials of [Learn OpenGL](https://learnopengl.com/Getting-started/Hello-Triangle) 
 
 
 <img src="https://user-images.githubusercontent.com/79365912/110024823-f513f880-7d04-11eb-8a38-5525f08e82ad.png" width="600">
